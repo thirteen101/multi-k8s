@@ -1,6 +1,6 @@
 docker build -t thirteen/multi-client:latest -t thirteen/multi-client:$SHA -f ./client/Dockerfile ./client
-docker build -t thirteen/multi-server:latest -t thirteen/multi-server:$SHA -f ./client/Dockerfile ./server
-docker build -t thirteen/multi-worker:latest -t thirteen/multi-worker:$SHA -f ./client/Dockerfile ./worker
+docker build -t thirteen/multi-server:latest -t thirteen/multi-server:$SHA -f ./server/Dockerfile ./server
+docker build -t thirteen/multi-worker:latest -t thirteen/multi-worker:$SHA -f ./worker/Dockerfile ./worker
 docker push thirteen/multi-client:latest
 docker push thirteen/multi-server:latest
 docker push thirteen/multi-worker:latest
