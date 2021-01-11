@@ -1,0 +1,20 @@
+apiVersion: cert-manager.io/v1alpha2
+kind: Certificate
+metadata:
+  name: thirteen-pw-tls
+spec:
+  secretName: thirteen-pw
+  issueRef:
+    name: letsencrypt-prod
+    kind: ClusterIssuer
+  commonName: thirteen.pw
+  dnsNames:
+    - thirteen.pw
+    - www.thirteen.pw
+  acme:
+    config:
+      - http01:
+          ingressClass: nginx
+        domains:
+          - thirteen.pw
+          - www.thirteen.pw
