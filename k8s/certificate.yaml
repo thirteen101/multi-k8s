@@ -4,7 +4,7 @@ metadata:
   name: thirteen-pw-tls
 spec:
   secretName: thirteen-pw
-  issueRef:
+  issuerRef:
     name: letsencrypt-prod
     kind: ClusterIssuer
   commonName: thirteen.pw
